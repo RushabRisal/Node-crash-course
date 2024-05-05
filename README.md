@@ -1,1 +1,3 @@
 # Node-crash-course
+Day#1 of Road to MERN-Stack Development.
+Starting from the Node.js....
