@@ -28,11 +28,16 @@ else{
         console.log('folder deleted');
     })
 }
-if(fs.existsSync('./docs/deleteme.txt')){
-    fs.unlink('./docs/deleteme.txt',(err)=>{
+console.log('hello world');
+if(fs.existsSync('./docs/blog3.txt')){
+    fs.unlink('./docs/blog3.txt',(err)=>{
         if(err){
             console.log(err);
         }
         console.log('file is deleted');
     })
 }
+else{
+    console.log('the file does not exist');
+}
+console.log("deleting the file....");
