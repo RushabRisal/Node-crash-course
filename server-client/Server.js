@@ -1,8 +1,19 @@
 const http=require('http');
 const fs=require('fs');
+const _=require('lodash');
 const server=http.createServer((req,res)=>{
     //console.log(req);
    // console.log(req.url,req.method);
+    //lodash...
+    const num=_.random(0,20);
+    console.log(num);
+    const greeting=_.once(()=>{
+        console.log('hello rushab!');
+    });
+    greeting();
+    greeting();
+
+
     //routing....
     let path='./view/';
     switch(req.url){
@@ -14,7 +25,7 @@ const server=http.createServer((req,res)=>{
             path+='about.html';
             res.statusCode=200;
             break;
-        case '/about-me':
+        case '/about-ours':
             res.statusCode=301;
             res.setHeader('Location','/about');
             res.end();
