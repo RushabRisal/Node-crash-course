@@ -8,3 +8,7 @@ const {people,age}=require('./people');
 console.log(people,age);
 const os=require('os');   //os is the build-in modules which gives us the detials of our device....
 console.log(os.platform(),os.homedir());
+
+
+
+

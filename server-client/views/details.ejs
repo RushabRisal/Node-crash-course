@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+       
+        <title><%=title%></title>
+    </head>
+
+<body>
+
+    <h3><%=Blog.title%></h3>
+    <p><%=Blog.snippet%></p>
+    <p><%=Blog.body%></p>
+    <a class="delete" data-doc="<%=Blog._id%>">delete</a>
+</body>
+<script>
+    const trashcan=document.querySelector('.delete');
+    trashcan.addEventListener('click',(e)=>{
+        const endPoint=`/blogs/${trashcan.dataset.doc}`;
+
+        fetch(endPoint,{
+            method:'DELETE'
+        })
+        .then((response)=>response.json())
+        .then((data)=>{window.location.href=data.redirect})
+        .catch((err)=>console.log(err))
+    })
+ </script>
+
+</html>

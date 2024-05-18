@@ -1,4 +1,33 @@
-body{
-    background: black;
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.navbar{
+    display: flex;
+    justify-content: space-between;
+    background-color: rgb(231, 231, 231);
+    border-bottom: 3px solid rgba(0,0,0,0.2);
+}
+.title{
+    display: flex;
+    align-items: center;
+    padding-left: 15px;
+}
+.nav-content{
+    display: flex;
 
+}
+.nav-item{
+    
+    padding: 20px;
+    list-style: none;
+    display: block
+}
+.nav-item:hover{
+    background-color: rgba(0,0,0,0.3);
+}
+a{
+    text-decoration: none;
+    color: black;
 }
